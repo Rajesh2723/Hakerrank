@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <map>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+      int q,type,y;
+    string x;
+    map<string,int> marks;
+    cin>>q;
+    for(int i=0; i<q; i++) {
+        cin>>type>>x;
+        if(type == 1){
+            cin>>y;
+            marks[x] +=y;
+        }
+        if(type == 2){
+            marks.erase(x);
+        }
+        if(type == 3){
+            cout<<marks[x]<<endl;
+        }
+        
+    }
+    
+       
+    return 0;
+}
+
+
+
